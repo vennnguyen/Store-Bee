@@ -112,3 +112,22 @@ header {
   color: var(--main-color);
   font-size: small;
 }
+
+/* slider */
+.slider-items {
+  position: relative;
+}
+.slider-item {
+  position: absolute;
+}
+.slider-item img {
+  margin-top: 10px;
+  width: 100vw;
+}
+.slider-arrow {
+  position: absolute;
+  z-index: 1;
+}
+.slider-arrow i {
+  cursor: pointer;
+}
