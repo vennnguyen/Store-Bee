@@ -1,5 +1,8 @@
 :root {
   --height-header: 70px;
+  --main-bg-color: #d5d5d5;
+  --main-transition: all 0.3 ease;
+  --main-color: whitesmoke;
 }
 *,
 ::after,
@@ -60,9 +63,52 @@ header {
 }
 .header__nav nav ul {
   display: flex;
-  column-gap: 12px;
   font-size: smaller;
 }
 .header__nav nav ul li a {
   line-height: var(--height-header);
+}
+.header__nav nav ul li {
+  padding: 0 10px;
+  transition: var(--main-transition);
+  cursor: pointer;
+}
+.header__nav nav ul li:hover {
+  background: var(--main-bg-color);
+}
+
+.header__search {
+  position: relative;
+}
+.header__search i {
+  position: absolute;
+  bottom: 8px;
+  right: 5px;
+  cursor: pointer;
+}
+.header__search input {
+  outline: none;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.header__cart i {
+  position: relative;
+  cursor: pointer;
+}
+.header__cart i::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  content: attr(number);
+  width: 17px;
+  height: 17px;
+  background: #000;
+  top: -10px;
+  right: -10px;
+  border-radius: 50%;
+  color: var(--main-color);
+  font-size: small;
 }
