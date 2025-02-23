@@ -1,0 +1,10 @@
+@media only screen and (max-width: 600px) {
+  .header__nav,
+  .header__logo,
+  .header__search {
+    display: none;
+  }
+  .header__logo-mobile a img {
+    width: 70px;
+  }
+}
