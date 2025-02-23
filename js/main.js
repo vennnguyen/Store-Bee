@@ -10,10 +10,9 @@ const arrowLeft = document.querySelector(".ri-arrow-left-fill");
 let i = 0;
 
 arrowRight.addEventListener("click", () => {
-  i++;
-  if (i < sliderItem.length) {
-    sliderItems.style.left = -i * 100 + "%";
-  } else {
+  if (i < sliderItem.length - 1) {
+    i++;
+    sliderMove(i);
     return false;
   }
 });
@@ -23,6 +22,21 @@ arrowLeft.addEventListener("click", () => {
     return false;
   } else {
     i--;
-    sliderItems.style.left = -i * 100 + "%";
+    sliderMove(i);
   }
 });
+
+// slider auto
+function autoSlider() {
+  if (i < sliderItem.length - 1) {
+    i++;
+    sliderMove(i);
+  } else {
+    i = 0;
+    sliderMove(i);
+  }
+}
+function sliderMove(i) {
+  sliderItems.style.left = -i * 100 + "%";
+}
+setInterval(autoSlider, 5000);

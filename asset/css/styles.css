@@ -1,7 +1,7 @@
 :root {
   --height-header: 70px;
   --main-bg-color: #d5d5d5;
-  --main-transition: all 0.3 ease;
+  --main-transition: all 0.3s ease;
   --main-color: whitesmoke;
 }
 *,
@@ -12,6 +12,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -47,7 +48,13 @@ select {
 }
 /* Header */
 header {
+  /* margin: 0;
+  padding: 0; */
   height: var(--height-header);
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  border-bottom: 1px solid var(--main-color);
 }
 .container {
   width: 1240px;
@@ -91,6 +98,8 @@ header {
   height: 30px;
   border: none;
   border-bottom: 1px solid #ccc;
+  border-radius: 999px;
+  padding: 0 10px;
 }
 
 .header__cart i {
@@ -114,20 +123,34 @@ header {
 }
 
 /* slider */
+.slider {
+  position: relative;
+  width: 100vw;
+  aspect-ratio: 2.5/1;
+  overflow: hidden;
+}
 .slider-items {
   position: relative;
+  transition: var(--main-transition);
+  /* overflow: hidden; */
 }
 .slider-item {
   position: absolute;
 }
 .slider-item img {
-  margin-top: 10px;
   width: 100vw;
+  /* max-width: 100%; */
 }
 .slider-arrow {
   position: absolute;
   z-index: 1;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
 }
 .slider-arrow i {
   cursor: pointer;
+  font-size: larger;
 }
