@@ -51,11 +51,11 @@ header {
   height: var(--height-header);
   position: fixed;
   z-index: 1;
-  /* width: 100%; */
+  width: 100%;
 }
 .container {
   width: 1240px;
-  margin: auto;
+  margin: 0 auto;
 }
 .header {
   display: flex;

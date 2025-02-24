@@ -40,3 +40,10 @@ function sliderMove(i) {
   sliderItems.style.left = -i * 100 + "%";
 }
 setInterval(autoSlider, 5000);
+
+// menubar responsive
+const menuBar = document.querySelector(".header-bar-icon");
+const headerNav = document.querySelector(".header__nav");
+menuBar.addEventListener("click", () => {
+  headerNav.classList.toggle("active");
+});
