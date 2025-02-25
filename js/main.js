@@ -47,3 +47,25 @@ const headerNav = document.querySelector(".header__nav");
 menuBar.addEventListener("click", () => {
   headerNav.classList.toggle("active");
 });
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".group-img").forEach((group) => {
+    let firstImg = group.querySelector("img:first-child");
+    if (firstImg) {
+      let imgSrc = firstImg.getAttribute("src");
+      let link = document.createElement("a");
+      link.setAttribute("href", imgSrc);
+      link.appendChild(firstImg.cloneNode(true));
+      firstImg.replaceWith(link);
+    }
+  });
+});
+
+//sticky header
+window.addEventListener("scroll", () => {
+  if (scrollY > 70) {
+    const header = document.querySelector("#header");
+    header.classList.add("active");
+  } else {
+    header.classList.remove("active");
+  }
+});

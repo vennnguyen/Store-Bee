@@ -3,6 +3,7 @@
   display: none;
 }
 @media only screen and (max-width: 768px) {
+  /* Header */
   .container {
     width: 100%;
   }
@@ -40,7 +41,19 @@
   .header__logo-mobile a img {
     width: 70px;
   }
-  .header {
+  .header,
+  .row-grid {
     padding: 0 12px;
+  }
+  /* hot product */
+  .hot-products .row-grid-hot-products {
+    grid-template-columns: repeat(2, 49%);
+    column-gap: 15px;
+  }
+
+  /* footer */
+  footer .row-grid {
+    grid-template-columns: repeat(2, 50%);
+    row-gap: 10px;
   }
 }
