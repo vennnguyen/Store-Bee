@@ -382,6 +382,10 @@ li::marker {
   opacity: 0.8;
   transition: var(--main-transition);
 }
+.product-detail__content img {
+  margin-top: 20px;
+  width: 100%;
+}
 /* hide arrow input */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

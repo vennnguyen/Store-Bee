@@ -50,7 +50,11 @@
     grid-template-columns: repeat(2, 49%);
     column-gap: 15px;
   }
-
+  /* product-detail */
+  .product-detail .row-grid {
+    grid-template-columns: 100%;
+    row-gap: 30px;
+  }
   /* footer */
   footer .row-grid {
     grid-template-columns: repeat(2, 50%);

@@ -87,11 +87,14 @@ for (let index = 0; index < imgSmall.length; index++) {
 const btnMinus = document.querySelector(".ri-subtract-line");
 const btnAdd = document.querySelector(".ri-add-line");
 const value = document.querySelector(".right-quantity__min-max input");
-while (value.value > 0) {
-  btnAdd.addEventListener("click", () => {
-    value.value++;
-  });
-  btnMinus.addEventListener("click", () => {
+btnAdd.addEventListener("click", () => {
+  value.value++;
+});
+
+btnMinus.addEventListener("click", () => {
+  if (value.value < 0) {
+    return false;
+  } else {
     value.value--;
-  });
-}
+  }
+});
