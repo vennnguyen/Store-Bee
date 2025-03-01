@@ -55,6 +55,11 @@
     grid-template-columns: 100%;
     row-gap: 30px;
   }
+  /* cart */
+  .cart-section .row-grid {
+    grid-template-columns: 100%;
+    row-gap: 20px;
+  }
   /* footer */
   footer .row-grid {
     grid-template-columns: repeat(2, 50%);
