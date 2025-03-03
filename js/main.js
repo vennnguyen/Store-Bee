@@ -37,10 +37,10 @@ function autoSlider() {
     sliderMove(i);
   }
 }
-// function sliderMove(i) {
-//   sliderItems.style.left = -i * 100 + "%";
-// }
-// setInterval(autoSlider, 5000);
+function sliderMove(i) {
+  sliderItems.style.left = -i * 100 + "%";
+}
+setInterval(autoSlider, 5000);
 
 // menubar responsive
 const menuBar = document.querySelector(".header-bar-icon");
