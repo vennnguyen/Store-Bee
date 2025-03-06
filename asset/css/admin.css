@@ -1,0 +1,106 @@
+:root {
+  --body-bg-color: #414e66;
+  --sup-bg-color: #f2f7fb;
+  --top-height: 70px;
+  --main-transition: all 0.3s ease;
+  --color-hover-text: #4a87ce;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--body-bg-color);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+button,
+textarea,
+input,
+select {
+  color: inherit;
+  font-family: inherit;
+}
+.row-grid {
+  display: grid;
+  justify-content: space-between;
+}
+/* admin */
+.admin .row-grid {
+  grid-template-columns: 20% 80%;
+}
+/* sidebar-top */
+.admin-sidebar {
+  height: 100vh;
+  background: var(--body-bg-color);
+}
+.admin-sidebar-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--top-height);
+  border-bottom: 1px solid #ccc;
+  background: #ccc;
+}
+.admin-sidebar-top img {
+  width: 100px;
+}
+.admin-sidebar-content {
+  padding: 30px 0 0 30px;
+  color: white;
+}
+.admin-sidebar-content ul li {
+  padding: 6px 0;
+  transition: var(--main-transition);
+}
+.admin-sidebar-content ul li:hover {
+  background-color: black;
+}
+
+.admin-sidebar-content > ul > li > a {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.admin-sidebar-content > ul > li > a i:last-child {
+  margin-left: auto;
+}
+.admin-sidebar-content ul li a i {
+  margin-right: 6px;
+}
+.sub-menu {
+  height: 0;
+  transition: var(--main-transition);
+  overflow: hidden;
+}
+.sub-menu li:hover a {
+  color: var(--color-hover-text);
+}
+.sub-menu.active {
+  height: 50px;
+}
+
+/* admin-content */
+.admin-content {
+  background: var(--sup-bg-color);
+}
