@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./asset/css/admin.css">
     <!-- font awesome -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
     <title>Admin store</title>
 </head>
 
@@ -74,13 +75,41 @@
                 </div>
                 <div class="admin-content-main">
                     <div class="admin-content-main-title">
-                        <h1>DashBoard</h1>
+                        <h1>Thêm Sản Phẩm</h1>
+                    </div>
+                    <div class="admin-content-main-content">
+                        <div class="content-left">
+                            <div class="content-two__input">
+                                <input type="text" placeholder="Tên Sản Phẩm">
+                                <input type="text" placeholder="Chất Liệu">
+                            </div>
+                            <div class="content-two__input">
+                                <input type="text" placeholder="Giá Bán">
+                                <input type="text" placeholder="Giá Giảm">
+                            </div>
+                            <textarea name="" id="editor">Đặc Điểm Nổi Bật</textarea>
+                            <textarea name="" id="editor" class="editor">Mô Tả Sản Phẩm</textarea>
+                            <button class="main-btn">Thêm Sản Phẩm</button>
+                        </div>
+                        <div class="content-right">
+                            <div class="content-right-img">
+                                <label for="file">Ảnh Đại Diện</label>
+                                <input type="file" id="file" hidden>
+                                <div class="img-show"></div>
+                            </div>
+                            <div class="content-right-imgs">
+                                <label for="files">Ảnh Sản Phẩm</label>
+                                <input type="file" id="files" hidden>
+                                <div class="imgs-show"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <script src="./js/admin.js"></script>
+
 </body>
 
 </html>
