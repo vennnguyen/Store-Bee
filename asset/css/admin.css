@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@700&family=Sora:wght@100..800&display=swap");
 :root {
   --body-bg-color: #414e66;
+
   --sup-bg-color: #f2f7fb;
   --top-height: 70px;
   --main-transition: all 0.3s ease;
@@ -55,6 +56,20 @@ select {
 }
 .main-btn:hover {
   opacity: 0.9;
+}
+.delete,
+.unconfirm {
+  padding: 3px;
+  background-color: red;
+  color: whitesmoke;
+  border-radius: 5px;
+}
+.edit,
+.confirm {
+  padding: 3px;
+  background-color: green;
+  color: whitesmoke;
+  border-radius: 5px;
 }
 /* admin */
 .admin .row-grid {
@@ -183,6 +198,11 @@ select {
     opacity: 1;
   }
 }
+.admin-content-top__right ul li img {
+  border-radius: 50%;
+  object-fit: contain;
+  margin-right: 10px;
+}
 /* admin content main */
 .admin-content-main-title h1 {
   padding: 12px;
@@ -203,6 +223,9 @@ select {
 }
 /* admin-content-main-content */
 .admin-content-main-content {
+  background-color: white;
+}
+.product-add {
   display: grid;
   grid-template-columns: 80% 20%;
   padding: 12px;
@@ -211,7 +234,7 @@ select {
 .content-left input {
   height: 40px;
   border: none;
-  background-color: white;
+  background-color: var(--sup-bg-color);
   margin-bottom: 20px;
   outline: none;
   border-radius: var(--main-border-radius);
@@ -243,4 +266,35 @@ select {
 .img-show,
 .imgs-show {
   min-height: 150px;
+}
+
+/* product_list */
+.product-list table,
+.order-list table {
+  width: 100%;
+  border-collapse: collapse;
+  padding: 12px 0;
+  text-align: center;
+}
+.product-list table th,
+.product-list table td,
+.order-list table th,
+.order-list table td {
+  vertical-align: middle; /* Căn giữa theo chiều dọc */
+  border-bottom: 1px solid #ccc; /* Đường kẻ giữa các hàng */
+}
+.product-list table th,
+.order-list table th {
+  background-color: var(--body-bg-color);
+  color: whitesmoke;
+  padding: 12px 0;
+}
+.admin-content-main-content table td img {
+  display: block;
+  padding: 10px 0;
+  margin: auto;
+}
+/* order-list */
+.order-list tbody tr td {
+  padding: 12px;
 }

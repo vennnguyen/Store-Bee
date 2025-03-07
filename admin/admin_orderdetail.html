@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="./asset/css/reset.css">
+    <link rel="stylesheet" href="./asset/css/admin.css">
+    <!-- font awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <title>Admin store</title>
+</head>
+
+<body>
+    <section class="admin">
+        <div class="row-grid">
+            <div class="admin-sidebar">
+                <div class="admin-sidebar-top">
+                    <img src="./asset/img/logo-coolmate.png" alt="">
+                </div>
+                <div class="admin-sidebar-content">
+                    <ul>
+                        <li><a href="">
+                                <i class="ri-dashboard-line">DashBoard</i>
+                                <i class="ri-add-box-line"></i>
+                            </a>
+
+                        </li>
+                        <li><a href="">
+                                <i class="ri-file-list-line">Đơn hàng </i>
+                                <i class="ri-add-box-line"></i></a>
+                            <ul class="sub-menu">
+                                <div class="sub-menu-items">
+                                    <li><a href=""><i class="ri-arrow-right-s-fill"></i>Danh sách</a>
+                                    </li>
+                                </div>
+
+                            </ul>
+                        </li>
+                        <li><a href="">
+                                <i class="ri-store-line">Sản phẩm</i>
+                                <i class="ri-add-box-line"></i></a>
+                            <ul class="sub-menu">
+                                <div class="sub-menu-items">
+                                    <li><a href=""><i class="ri-arrow-right-s-fill"></i>Danh sách</a>
+                                    </li>
+                                    <li><a href=""><i class="ri-arrow-right-s-fill"></i>Thêm</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="admin-content">
+                <div class="admin-content-top">
+                    <div class="admin-content-top__left">
+                        <ul>
+                            <li><i class="ri-search-line"></i></li>
+                            <li><i class="ri-drag-move-line"></i></li>
+                        </ul>
+                    </div>
+                    <div class="admin-content-top__right">
+                        <ul>
+                            <li><i class="ri-notification-4-line" num="3"></i></li>
+                            <li><i class="ri-message-2-line" num="5"></i></li>
+                            <li><img src="./asset/img/download.jfif" alt="" style="width: 50px;">
+                                <p>VEN <i class="ri-arrow-down-s-fill"></i></p>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </div>
+                <div class="admin-content-main">
+                    <div class="admin-content-main-title">
+                        <h1>Chi Tiết Đơn Hàng</h1>
+                    </div>
+                    <div class="admin-content-main-content">
+                        <div class="product-list">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Ảnh</th>
+                                        <th>Tên Sản Phẩm </th>
+                                        <th>Giá</th>
+                                        <th>Số Lượng</th>
+                                        <th>Thành Tiền</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><img src="./asset/img/ao-khoac-2-lop-casual-xanh-orion-blue_(13).webp"
+                                                alt="áo khoác 2 lớp" width="70px"></td>
+                                        <td>Áo Khoác 2 Lớp</td>
+                                        <td>140,000</td>
+                                        <td>2</td>
+
+                                        <td>
+                                            280,000
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" style="font-weight: 700; padding: 10px;">TỔNG CỘNG</td>
+                                        <td colspan="2" style="font-weight: 700;">280,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/admin.js"></script>
+
+</body>
+
+</html>
